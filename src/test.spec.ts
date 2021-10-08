@@ -1,7 +1,12 @@
-describe('test', function () {
+import {Greeter} from "./greeter";
 
-  it('test jest', function () {
-    expect(true).toBe(true);
+describe('greeting', function () {
+
+  it('greeting my friend with unknown name', function () {
+    let testGreeter = new Greeter;
+    let greetingString: String;
+    greetingString =  testGreeter.greeting();
+    expect(greetingString).toBe("Greeting, my friend!");
   });
 
 
