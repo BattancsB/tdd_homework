@@ -30,5 +30,15 @@ describe('greeting', function () {
     greetingString =  testGreeter.greeting("John", "Bob", "Kate", "Alex", "Hunter");
     expect(greetingString).toBe("Greetings, John, Bob, Kate, Alex, and Hunter!");
   });
+
+  it('should convert to uppercase when shouting', function () {
+    let testGreeter = new Greeter;
+    let greetingString: String;
+    greetingString =  testGreeter.greeting("JOHN");
+    expect(greetingString).toBe("GREETINGS, JOHN!");
+  });
+
   
+
+
 });

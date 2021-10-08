@@ -11,7 +11,10 @@ export class Greeter{
             return "Greetings, my friend!"
         }else{
             if(name.length === 1){
-                return "Greetings, "+ name + "!";
+                if(name[0] === name[0].toUpperCase())
+                    return "GREETINGS, "+ name[0].toUpperCase() + "!";
+                else
+                    return "Greetings, " + name + "!";
             }else{
                 let nameString: string = "Greetings, ";
                 for(let i = 0; i < name.length-1; i++){
