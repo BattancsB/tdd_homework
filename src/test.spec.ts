@@ -60,6 +60,19 @@ describe('greeting', function () {
     expect(greetingString).toBe("Greetings, John, Hanna, Bob, Anna, and Alex. AND GREETINGS, KATE!");
   });
 
+  it('should split input names with commas', function () {
+    let testGreeter = new Greeter;
+    let greetingString: String;
+    greetingString =  testGreeter.greeting("John", "Hanna, Bob", "Bob", "Anna, Alex, Kate");
+    expect(greetingString).toBe("Greetings, John, Hanna, Bob, Anna, and Alex. AND GREETINGS, KATE!");
+  });
+
+  it('should split input names with commas', function () {
+    let testGreeter = new Greeter;
+    let greetingString: String;
+    greetingString =  testGreeter.greeting("John", "Hanna, BOB, Anna", "KATE");
+    expect(greetingString).toBe("Greetings, John, Hanna, Bob, Anna, and Alex. AND GREETINGS, KATE!");
+  });
 
 
 
